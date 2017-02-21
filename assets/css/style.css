@@ -1,8 +1,133 @@
+
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'distant_galaxyregular';
+    src: url('../fonts/distgrg_-webfont.woff2') format('woff2'),
+         url('../fonts/distgrg_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 
 body{
 	background-color: #000;	
+}
+
+h1{
+	font-family: 'distant_galaxyregular', sans-serif;
+	font-size: 40px;
+	text-align: center;
+	width: 100%;
+	color: #ccc;
+	padding: 25px 0px;
+}
+
+
+#container{
+	position: absolute;
+	top: 5%;
+	width: 80%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	min-width: 360px;
+	z-index: 1;
+}
+
+
+
+
+.pHolder{
+	position: relative;
+	text-align: center;
+}
+
+.player{
+	position: relative;
+	display: inline-block;;
+	list-style: none;	
+	max-width: 125px;
+	width: calc(25% - 10px);
+	margin: 5px;
+	cursor: pointer;
+}
+
+.player .name{
+	padding: 10px 0px;
+}
+
+.player .characterImg{
+	position: relative;
+	width: 100%;
+}
+
+.player .health{
+	padding: 10px 0px;	
+}
+
+
+
+
+
+#characterSelectZone{
+
+}
+
+#characterSelectZone .player{
+	background-color: #fff;
+	color: #000;
+}
+
+
+
+
+
+#toAttackZone{
+	
+}
+
+#toAttackZone .player{
+	background-color: #f00;
+	color: #fff;
+}
+
+
+
+
+
+#defenderZone{
+	
+}
+
+#defenderZone .player{
+	background-color: #000;
+	color: #fff;
+}
+
+
+
+
+
+
+
+#starWars_bg{
+	position: fixed;
+	top: 0;
+	left: 0;  
+	width: 100%;
+	z-index: 0;
+	overflow: hidden;
+	min-width: 1400px;
+}
+
+@media screen and (max-width: 1400px){
+	#starWars_bg{
+		width: 1400px;
+		left: 50%;
+		margin-left: -700px;
+	}
 }
