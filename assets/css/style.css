@@ -15,6 +15,7 @@
 
 body{
 	background-color: #000;	
+	opacity: 0.0;
 }
 
 h1{
@@ -24,6 +25,18 @@ h1{
 	width: 100%;
 	color: #ccc;
 	padding: 25px 0px;
+}
+
+h4{
+	color: #fff;
+    text-align: center; 
+    padding: 10px 25px;
+    display: table;
+    margin: 10px auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.85);
 }
 
 
@@ -48,12 +61,13 @@ h1{
 
 .player{
 	position: relative;
-	display: inline-block;;
+	display: inline-block;
 	list-style: none;	
 	max-width: 125px;
 	width: calc(25% - 10px);
 	margin: 5px;
 	cursor: pointer;
+	transition: opacity 1s, background-color 1.5s;
 }
 
 .player .name{
@@ -69,7 +83,33 @@ h1{
 	padding: 10px 0px;	
 }
 
+.defender{
+	background-color: #000 !important;
+	color: #fff !important;	
+}
 
+
+
+.cta{
+    position: absolute;
+    color: #f00;
+    background-color: rgba(0,0,0,0.85);
+    border: #b5afaf solid 1px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    padding: 5px 25px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.65);
+    border-radius: 4px; 
+    top: 0;
+    left: 50%;
+    margin-left: -75px;	
+    z-index: 500;
+	-webkit-user-select: none; 
+	-moz-user-select: none;    
+	-ms-user-select: none;     
+	user-select: none;  	
+}
 
 
 
@@ -81,6 +121,27 @@ h1{
 	background-color: #fff;
 	color: #000;
 }
+
+
+
+
+
+
+
+#attackUI{
+	position: relative;
+	margin: 15px auto;
+}
+
+#choseEnemyMessage{
+	z-index: 5;
+}
+
+#attackBtn{
+    position: absolute;
+    margin-top: 3px;    
+}
+
 
 
 
@@ -98,18 +159,47 @@ h1{
 
 
 
-
-#defenderZone{
+#enemiesInWaiting{
 	
 }
 
-#defenderZone .player{
+#enemiesInWaiting .player{
 	background-color: #000;
 	color: #fff;
 }
 
+.hidden{
+	display: none;
+}
 
 
+
+
+
+#attackFeedback{
+	position: relative;
+	width: 100%;
+	padding-top: 10px;
+	text-align: center;
+	z-index: 10;
+	color: #fff;
+}
+
+#endOfGameStatus{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	z-index: 10;
+	color: #fff;	
+	display: none;
+    padding: 30px 0px;
+    padding-bottom: 10px;
+}
+
+#replayBtn{
+    position: relative; 
+    display: none;            
+}
 
 
 
@@ -130,4 +220,8 @@ h1{
 		left: 50%;
 		margin-left: -700px;
 	}
+}
+
+.fadeAway{
+	opacity: 0.0;
 }

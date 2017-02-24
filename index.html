@@ -18,9 +18,16 @@
     <h1>Star Wars RPG!</h1>
 
     <!-- area for character to select, or character that is selected -->
+    <h4 id="chosePlayerMessage">▼▼▼ Select a Player! ▼▼▼</h4>
     <ul id="characterSelectZone" class="pHolder">
 
     </ul>  
+
+
+    <div id="attackUI">
+      <h4 id="choseEnemyMessage">▼▼▼ Chose An Enemy below to fight! ▼▼▼</h4>
+      <div id="attackBtn" class="cta">ATTACK!!!</div>           
+    </div>
 
 
     <!-- area for character ready to fight! -->
@@ -28,11 +35,14 @@
       
     </ul>
 
-
     <!-- area for character currently defending -->
-    <ul id="defenderZone" class="pHolder">
+    <ul id="enemiesInWaiting" class="pHolder hidden">
       
     </ul>
+
+    <div id="attackFeedback"></div>
+    <div id="endOfGameStatus"></div>
+    <div id="replayBtn" class="cta">Play Again?</div>
     
 
   </div>
@@ -41,7 +51,9 @@
 
 
   
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
+  <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> 
   <script src="assets/javascript/game.js"></script>
 
 </body>
